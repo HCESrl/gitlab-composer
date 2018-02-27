@@ -1,0 +1,30 @@
+{
+    "name":"hcesrl/gitlab-composer",
+    "description":"A Composer adapter for packages hosted on GitLab CE.",
+    "license":"MIT",
+    "keywords":[
+        "gitlab",
+        "composer",
+        "packages"
+    ],
+    "authors":[
+        {
+            "name":"Fabio Savina",
+            "email":"fabio.savina@gmail.com"
+        }
+    ],
+    "require":{
+        "php":">=7.0.0",
+        "m4tthumphrey/php-gitlab-api":"^9.6",
+        "php-http/guzzle6-adapter":"^1.1"
+    },
+    "require-dev":{
+        "filp/whoops":"~2.0",
+        "phpunit/phpunit":"~6.0"
+    },
+    "autoload":{
+        "psr-4":{
+            "GitLabComposer\\":"src/GitLabComposer"
+        }
+    }
+}
