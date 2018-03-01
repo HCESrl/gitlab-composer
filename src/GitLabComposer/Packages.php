@@ -377,4 +377,23 @@ class Packages implements \JsonSerializable
 	}
 	
 	
+	/**
+	 * @return void
+	 */
+	public function render ()
+	{
+		if ( $this->isModified () )
+		{
+			header ( 'HTTP/1.0 304 Not Modified' );
+			die;
+		}
+		
+		header ( 'Content-Type: application/json' );
+		header ( 'Last-Modified: ' . gmdate ( 'r', $this->lastActivity () ) );
+		header ( 'Cache-Control: max-age=0' );
+		echo json_encode ( $this->jsonSerialize () );
+		die;
+	}
+	
+	
 }
