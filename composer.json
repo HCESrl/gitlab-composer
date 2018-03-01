@@ -14,7 +14,6 @@
         }
     ],
     "require":{
-        "php":">=7.0.0",
         "m4tthumphrey/php-gitlab-api":"^9.6",
         "php-http/guzzle6-adapter":"^1.1"
     },
