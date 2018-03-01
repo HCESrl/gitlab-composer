@@ -1,6 +1,6 @@
 {
     "name":"hcesrl/gitlab-composer",
-    "description":"A Composer adapter for packages hosted on GitLab CE.",
+    "description":"A Composer repository index generator for your GitLab CE projects",
     "license":"MIT",
     "keywords":[
         "gitlab",
