@@ -17,16 +17,11 @@ $packages = new \GitLabComposer\Packages( 'https://gitlab.example.com/api/v4/', 
 
 Customize the behaviour by setting a path for the cache files and a whitelist of groups and projects:
 ```php
-$packages->setCachePath ( __DIR__ . '/../cache' )
-		 ->addGroup (
-			 'group1',
-			 'group2'
-		 )
-		 ->addProject (
-			 'group1/foo',
-			 'group2/bar',
-			 'group2/foobar'
-		 );
+$packages->setCachePath ( __DIR__ . '/../cache' );
+
+$packages->addGroup ( 'group1', 'group2' );
+
+$packages->addProject ( 'group1/foo', 'group2/bar', 'group2/foobar' );
 ```
 
 Render the packages json file:
