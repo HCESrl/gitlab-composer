@@ -122,7 +122,7 @@ class Packages implements \JsonSerializable
 	 * @param array $project
 	 * @return array|false
 	 */
-	protected function loadProjectData ( $project )
+	public function loadProjectData ( $project )
 	{
 		if ( $this->cachePath )
 		{
@@ -160,7 +160,7 @@ class Packages implements \JsonSerializable
 	/**
 	 * @return array
 	 */
-	protected function fetchAllProjects ()
+	public function fetchAllProjects ()
 	{
 		$allProjects = [];
 		
@@ -196,7 +196,7 @@ class Packages implements \JsonSerializable
 	 * @param array $project
 	 * @return array
 	 */
-	protected function fetchProjectVersions ( $project )
+	public function fetchProjectVersions ( $project )
 	{
 		$versions = [];
 		
@@ -235,7 +235,7 @@ class Packages implements \JsonSerializable
 	 * @param array $ref commit id
 	 * @return array   [$version => ['name' => $name, 'version' => $version, 'source' => [...]]]
 	 */
-	protected function fetchProjectVersion ( $project, $ref )
+	public function fetchProjectVersion ( $project, $ref )
 	{
 		if ( preg_match ( '/^v?\d+\.\d+(\.\d+)*(\-(dev|patch|alpha|beta|RC)\d*)?$/', $ref[ 'name' ] ) )
 		{
@@ -267,7 +267,7 @@ class Packages implements \JsonSerializable
 	 * @param string $ref commit id
 	 * @return array|false
 	 */
-	protected function fetchProjectComposer ( $project, $ref )
+	public function fetchProjectComposer ( $project, $ref )
 	{
 		try
 		{
@@ -333,7 +333,7 @@ class Packages implements \JsonSerializable
 	/**
 	 * @return array
 	 */
-	protected function getData ()
+	public function getData ()
 	{
 		$cacheFile = "{$this->cachePath}/packages.json";
 		
