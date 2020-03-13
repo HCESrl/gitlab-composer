@@ -2,6 +2,8 @@
 
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
+A Composer repository index generator for your GitLab CE projects.
+
 ## Installation
 
 Install the package:
